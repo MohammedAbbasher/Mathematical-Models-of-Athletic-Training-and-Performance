@@ -1,5 +1,3 @@
-# Mathematical-Models-of-Athletic-Training-and-Performance
-
 # Mathematical Models of Athletic Training and Performance
 
 
@@ -26,11 +24,11 @@
 
 ---
 
-# 1. Banister Fitness-Fatigue Model
+# 1. IR Fitness-Fatigue Model
 
 ## Description
 
-The Banister model, also called the Impulse-Response (IR) model, represents athletic performance as the balance between:
+The Impulse-Response (IR) model, represents athletic performance as the balance between:
 
 - Positive training adaptations (fitness)
 - Negative training adaptations (fatigue)
@@ -62,9 +60,6 @@ where:
 - Characteristic time computation:
   - `t_g` : maximum positive training influence
   - `t_n` : fatigue-to-fitness transition
-- Modular MATLAB implementation
-- Vectorized computations
-- Scientific documentation and comments
 
 ---
 
@@ -84,13 +79,13 @@ The model generates:
 
 ## Description
 
-The PerPot (Performance Potential) model proposed by Jürgen Perl is a nonlinear antagonistic model describing athletic adaptation through the interaction between:
+The PerPot (Performance Potential) model is a nonlinear antagonistic model describing athletic adaptation through the interaction between:
 
 - Stress Potential (SP)
 - Recovery Potential (RP)
 - Performance Potential (PP)
 
-Unlike the classical Banister model, PerPot uses nonlinear `min()` and `max()` operators to represent:
+Unlike the classical IR model, PerPot uses nonlinear `min()` and `max()` operators to represent:
 
 - physiological saturation
 - recovery limitations
@@ -111,39 +106,25 @@ to update the athlete state variables.
 - Nonlinear antagonistic dynamics
 - Physiological saturation modeling
 - Overtraining representation
-- Modular MATLAB implementation
-- Scientific documentation and comments
 
 ---
 
 # References
 
-## Banister Fitness-Fatigue Model
+## IR Fitness-Fatigue Model
 
-- Calvert, T.W., Banister, E.W., Savage, M.V., Bach, T.
-  *A Systems Model of the Effects of Training on Physical Performance*,
-  IEEE Transactions on Systems, Man, and Cybernetics, 1976.
-
-- Fitz-Clarke, J.R., Morton, R.H., Banister, E.W.
-  *Optimizing athletic performance by influence curves*,
-  Journal of Applied Physiology, 1991.
-
-- Busso, T., Candau, R., Lacour, J.R.
-  *Fatigue and fitness modelled from the effects of training on performance*,
-  European Journal of Applied Physiology, 1994.
+- David C. Clarke and Philip F. Skiba
+  *Rationale and resources for teaching the mathematical modeling of athletic
+training and performance*,
+  Adv Physiol Educ, 2013.
 
 ---
 
 ## PerPot Model
 
-- Perl, J.
-  *PerPot: A Metamodel for Simulation of Load Performance Interaction*,
-  European Journal of Sport Science, 2001.
-
-- Schäfer et al.
-  *Automated Generation and Optimization of Training Plans*,
+- David Schaefer, Alexander Asteroth, Melanie Ludwig
+  *Training Plan Evolution based on Training Models*,
   2015.
-
 ---
 
 # Requirements
@@ -152,55 +133,6 @@ to update the athlete state variables.
 - No external toolboxes required
 
 The code was tested on standard MATLAB installations.
-
----
-
-# Usage
-
-## Banister Model
-
-Run:
-
-```matlab
-main
-```
-
-inside:
-
-```text
-Banister_Model/
-```
-
-You can choose the workload type inside `main.m`:
-
-```matlab
-workload_type = 1;
-```
-
-where:
-
-- `1` → Rectangular workload
-- `2` → Triangular workload
-
----
-
-## PerPot Model
-
-Run:
-
-```matlab
-main
-```
-
-inside:
-
-```text
-PerPot_Model/
-```
-
-Modify the physiological parameters directly in the user input section.
-
----
 
 # Scientific Notes
 
@@ -217,22 +149,6 @@ Real-world applications require:
 - athlete-specific calibration
 - experimental validation
 - longitudinal performance measurements
-
----
-
-# Future Improvements
-
-Possible future extensions include:
-
-- time-dependent PerPot simulations
-- athlete parameter calibration
-- optimization algorithms
-- tapering optimization
-- evolutionary training plan generation
-- multi-objective optimization
-- coupling with real training datasets
-
----
 
 # License
 

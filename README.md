@@ -243,5 +243,3 @@ This repository is intended for educational and research purposes.
 # Author
 
 Mohammed Abbasher
-
-CFD Engineer | Scientific Computing | Mathematical Modeling
